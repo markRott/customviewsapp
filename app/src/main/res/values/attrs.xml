@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="LineView">
+
+        <!--        Attrs for grid-->
+        <attr name="grid_line_rows" format="integer" />
+        <attr name="grid_line_column" format="integer" />
+        <attr name="grid_line_width" format="float" />
+        <attr name="grid_line_color" format="color" />
+
+        <!--        Attrs for curve -->
+        <attr name="line_color" format="color" />
+        <attr name="line_width" format="float" />
+
+
+        <attr name="circle_color" format="color" />
+        <attr name="circle_radius" format="float" />
+
+    </declare-styleable>
+
+</resources>

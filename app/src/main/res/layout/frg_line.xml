@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.line.LineFragment">
+
+    <com.example.customviewsapp.customview.LineView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+
+        custom:circle_color="@color/green"
+        custom:circle_radius="13"
+
+        custom:grid_line_color="@color/grey"
+        custom:grid_line_column="15"
+        custom:grid_line_rows="15"
+        custom:grid_line_width="1"
+
+        custom:line_color="@color/red"
+        custom:line_width="10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
