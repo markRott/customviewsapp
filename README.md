@@ -25,7 +25,9 @@ _Attrs for circle:_
 - circle_radius
 
 
-example:
+Example:
+
+`xmlns:custom="http://schemas.android.com/apk/res-auto"`
 
 ```
 <com.example.customviewsapp.customview.LineView
