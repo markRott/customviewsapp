@@ -33,7 +33,8 @@ class DrawGrid : DrawContract {
     override fun onDraw(canvas: Canvas) {
 
         val currWidth = canvas.width
-        val currHeight = canvas.height - 80
+//        val currHeight = canvas.height - 80
+        val currHeight = canvas.height
 
         val cellWidth = currWidth / numColumns
         val cellHeight = currHeight / numRows

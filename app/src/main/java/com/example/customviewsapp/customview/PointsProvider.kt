@@ -3,11 +3,12 @@ package com.example.customviewsapp.customview
 import android.graphics.PointF
 import com.example.customviewsapp.customview.contracts.PointsProviderContract
 
-object PointsProvider : PointsProviderContract {
+class PointsProvider : PointsProviderContract {
 
     private val points = mutableListOf<PointF>()
     private val connectionPoints1 = mutableListOf<PointF>()
     private val connectionPoints = mutableListOf<PointF>()
+    private val clickDataList = mutableListOf<PointClickData>()
 
     init {
         generateStubPoints()
@@ -34,4 +35,10 @@ object PointsProvider : PointsProviderContract {
     override fun connectionPoints1(): List<PointF> = connectionPoints1.toList()
 
     override fun connectionPoints2(): List<PointF> = connectionPoints.toList()
+
+    override fun savePointClickData(data: PointClickData) {
+        clickDataList.add(data)
+    }
+
+    override fun pointsClickData(): List<PointClickData> = clickDataList.toList()
 }
