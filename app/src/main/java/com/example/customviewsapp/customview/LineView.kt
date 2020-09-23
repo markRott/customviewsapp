@@ -12,6 +12,7 @@ import com.example.customviewsapp.customview.draw.DrawBezierCurve
 import com.example.customviewsapp.customview.draw.DrawCircle
 import com.example.customviewsapp.customview.draw.DrawGrid
 import com.example.customviewsapp.showToast
+import kotlin.math.abs
 
 class LineView @JvmOverloads constructor(
     context: Context,
@@ -45,16 +46,22 @@ class LineView @JvmOverloads constructor(
         super.onDraw(canvas)
         if (canvas == null) return
 
+        canvas.save()
+        canvas.translate(0f, height.toFloat())
+        canvas.scale(1f, -1f)
+
         drawGrid.onDraw(canvas)
         drawBezierCurve.onDraw(canvas)
         drawCircle.onDraw(canvas)
+
+        canvas.restore()
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
             MotionEvent.ACTION_UP -> {
                 val currX = event.x
-                val currY = event.y
+                val currY = abs((event.y - height))
                 pointsProvider.pointsClickData().firstOrNull {
                     (currX >= it.xValues.first && currX <= it.xValues.second) &&
                             (currY >= it.yValues.first && currY <= it.yValues.second)
