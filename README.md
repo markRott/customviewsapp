@@ -34,7 +34,7 @@ example:
    android:layout_height="match_parent"
    android:layout_margin="10dp"
 
-   custom:circle_color="@color/green"
+   **custom:circle_color="@color/green"**
    custom:circle_radius="13"
 
    custom:grid_line_color="@color/grey"
